@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2026年11月餐厅月刊 | November 2026 Restaurant Monthly</title>
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root{
+    --navy:#123a5a;
+    --blue:#2f7ea6;
+    --sky:#e9f3f8;
+    --gold:#c1873a;
+    --light:#f3f7fa;
+    --lighter:#fafcfd;
+    --text:#25384a;
+    --muted:#5f7382;
+    --line:#d6e2ea;
+    --red:#bf4a40;
+    --green:#3e8568;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#eef4f8;
+    color:var(--text);
+    font-family:
+        Arial,
+        "Microsoft YaHei",
+        "PingFang SC",
+        sans-serif;
+}
+
+/* =====================================================
+   LANGUAGE TOGGLE
+===================================================== */
+
+.lang-toggle{
+    position:fixed;
+    top:14px;
+    right:16px;
+    z-index:999;
+    background:#ffffff;
+    border:1px solid var(--line);
+    box-shadow:0 4px 14px rgba(18,58,90,.14);
+    display:flex;
+    overflow:hidden;
+}
+
+.lang-toggle button{
+    border:0;
+    background:#ffffff;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.5px;
+    padding:9px 14px;
+    cursor:pointer;
+}
+
+.lang-toggle button.active{
+    background:var(--navy);
+    color:#ffffff;
+}
+
+body[data-lang="cn"] .s-en,
+body[data-lang="cn"] .sep{display:none !important;}
+body[data-lang="en"] .s-zh,
+body[data-lang="en"] .sep{display:none !important;}
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+    width:1120px;
+    min-height:700px;
+    margin:24px auto;
+    padding:0 0 70px;
+
+    background:#ffffff;
+
+    position:relative;
+    overflow:hidden;
+
+    page-break-after:always;
+}
+
+.page:last-child{
+    page-break-after:auto;
+}
+
+/* =====================================================
+   BANNER  (country / city photo)
+===================================================== */
+
+.banner{
+    height:190px;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 72px;
+    border-bottom:4px solid var(--gold);
+    overflow:hidden;
+}
+
+.banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.94) 0%,
+            rgba(255,255,255,.74) 48%,
+            rgba(255,255,255,.20) 100%
+        );
+}
+
+.banner .bc{
+    position:relative;
+    z-index:1;
+    max-width:780px;
+}
+
+.banner .kicker{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.banner h1{
+    color:var(--navy);
+    font-size:38px;
+    line-height:1.12;
+    margin:8px 0 6px;
+}
+
+.banner h1.s-en{
+    font-size:30px;
+}
+
+.banner .sub{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+}
+
+.banner-tag{
+    display:inline-block;
+    background:var(--navy);
+    color:#ffffff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    padding:5px 11px;
+    margin-bottom:10px;
+}
+
+/* country / city background images */
+.b-cover{background-image:url("https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=85");}
+.b-spain{background-image:url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=85&sat=20");}
+.b-portugal{background-image:url("https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1600&q=85");}
+.b-italy{background-image:url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85");}
+.b-venice{background-image:url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=85");}
+.b-uk{background-image:url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=85");}
+.b-france{background-image:url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=85");}
+.b-germany{background-image:url("https://images.unsplash.com/photo-1464817739973-80002845bccb?auto=format&fit=crop&w=1600&q=85");}
+.b-europe{background-image:url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85");}
+.b-restaurant{background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85");}
+
+/* =====================================================
+   CONTENT WRAP
+===================================================== */
+
+.content{
+    padding:26px 72px 0;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+h2{
+    color:var(--navy);
+    font-size:24px;
+    line-height:1.25;
+    margin:8px 0 12px;
+}
+
+h3{
+    color:var(--navy);
+    font-size:17px;
+    line-height:1.4;
+    margin:0 0 8px;
+}
+
+p{
+    font-size:14px;
+    line-height:1.7;
+    margin:8px 0;
+}
+
+.en{
+    color:var(--muted);
+}
+
+.muted{color:var(--muted);}
+.small{font-size:12px;}
+.gold{color:var(--gold);}
+.bold{font-weight:800;}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.col-stack{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+.col-stack .card{
+    flex:1;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+    border:1px solid var(--line);
+    background:#ffffff;
+    padding:20px;
+}
+
+.card.soft{
+    background:var(--light);
+    border:0;
+}
+
+.label{
+    display:inline-block;
+    padding:6px 10px;
+    background:var(--navy);
+    color:#ffffff;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.label.red{background:var(--red);}
+.label.green{background:var(--green);}
+.label.gold{background:var(--gold);}
+.label.blue{background:var(--blue);}
+
+.city{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    margin-bottom:8px;
+}
+
+.restaurant{
+    color:var(--navy);
+    font-size:21px;
+    font-weight:900;
+    line-height:1.35;
+    margin-bottom:8px;
+}
+
+.location{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+}
+
+.price{
+    color:var(--gold);
+    font-size:34px;
+    font-weight:900;
+    line-height:1;
+}
+
+.price small{
+    color:var(--muted);
+    font-size:11px;
+    font-weight:700;
+}
+
+/* =====================================================
+   PHOTO (single restaurant / food image)
+===================================================== */
+
+.photo{
+    height:150px;
+    margin:-20px -20px 16px;
+    background-size:cover;
+    background-position:center;
+}
+
+.photo-tapas{background-image:url("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=85");}
+.photo-grill{background-image:url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85");}
+.photo-chinese{background-image:url("https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=85");}
+.photo-sushi{background-image:url("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1200&q=85");}
+.photo-buffet{background-image:url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=85");}
+.photo-restaurant{background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85");}
+
+/* card with its own background photo + wash */
+.card.photocard{
+    position:relative;
+    color:var(--text);
+    background-clip:padding-box;
+}
+.card.photocard .pcw{
+    position:relative;
+    z-index:1;
+}
+
+/* =====================================================
+   NOTICE
+===================================================== */
+
+.notice{
+    background:var(--light);
+    border-left:5px solid var(--gold);
+    padding:16px 20px;
+    line-height:1.7;
+}
+.notice.red{border-left-color:var(--red);}
+.notice.green{border-left-color:var(--green);}
+.notice.blue{border-left-color:var(--blue);}
+
+/* highlighted callout for "新餐厅推荐" / sub text */
+.callout{
+    background:linear-gradient(90deg,#fff5e2,#fffaf0);
+    border:1px solid #f0dcb4;
+    border-left:6px solid var(--gold);
+    padding:14px 18px;
+    margin-bottom:18px;
+}
+.callout .ct{
+    color:var(--navy);
+    font-size:20px;
+    font-weight:900;
+}
+.callout .cs{
+    color:#8a5a12;
+    font-size:15px;
+    font-weight:700;
+}
+
+/* =====================================================
+   BIG STATUS LABELS (temporary / renovation)
+===================================================== */
+
+.status-big{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 16px;
+    margin:6px 0 16px;
+    color:#ffffff;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+.status-big.orange{background:#d98324;}
+.status-big.red{background:var(--red);}
+.status-big.green{background:var(--green);}
+.status-big .dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#ffffff;
+    flex:none;
+}
+
+/* =====================================================
+   PRICE COMPARE (old struck / new highlighted)
+===================================================== */
+
+.price-compare{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:26px;
+    margin:16px 0 10px;
+}
+.pc-label{
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--muted);
+    margin-bottom:4px;
+}
+.pc-label.new{color:var(--red);}
+.price-old{
+    color:#9aa7b0;
+    font-size:30px;
+    font-weight:800;
+    text-decoration:line-through;
+    text-decoration-thickness:3px;
+}
+.price-arrow{
+    color:var(--gold);
+    font-size:30px;
+    font-weight:300;
+}
+.price-new{
+    color:var(--red);
+    font-size:46px;
+    font-weight:900;
+    line-height:1;
+}
+.price-note{
+    color:#8a5a12;
+    font-size:13px;
+    font-weight:800;
+    background:#fff3d9;
+    display:inline-block;
+    padding:5px 12px;
+    margin-top:6px;
+}
+
+/* vertical info list (each item important) */
+.vlist{
+    list-style:none;
+    margin:12px 0 0;
+    padding:0;
+}
+.vlist li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    padding:8px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:13px;
+    line-height:1.55;
+}
+.vlist li:last-child{border-bottom:0;}
+.vlist .vnum{
+    flex:none;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#ffffff;
+    font-size:12px;
+    font-weight:900;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:1px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+    position:absolute;
+    left:72px;
+    right:72px;
+    bottom:20px;
+    border-top:1px solid var(--line);
+    padding-top:8px;
+    color:#8a949a;
+    font-size:10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.cover{
+    min-height:700px;
+    display:flex;
+    align-items:center;
+    color:var(--navy);
+    background:
+        linear-gradient(115deg,rgba(233,243,248,.97),rgba(253,246,232,.92)),
+        url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    border-top:8px solid var(--gold);
+}
+
+.cover-content{
+    max-width:900px;
+    padding:0 72px;
+}
+
+.cover .kicker{
+    color:var(--gold);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.cover-title{
+    font-size:66px;
+    line-height:1.05;
+    font-weight:900;
+    letter-spacing:-2px;
+    margin:20px 0 12px;
+    color:var(--navy);
+}
+
+.cover h2{
+    color:var(--blue);
+    font-size:32px;
+    font-weight:500;
+}
+
+.cover-date{
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.8;
+    margin-top:28px;
+}
+
+.cover .footer{
+    border-color:rgba(18,58,90,.2);
+    color:var(--muted);
+}
+
+/* =====================================================
+   FINAL PAGE
+===================================================== */
+
+.final-page{
+    min-height:700px;
+    display:flex;
+    align-items:center;
+    color:var(--navy);
+    background:
+        linear-gradient(120deg,rgba(233,243,248,.96),rgba(253,246,232,.93)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    border-top:8px solid var(--gold);
+}
+
+.final-page h1,
+.final-page h2,
+.final-page h3{
+    color:var(--navy);
+}
+
+.final-page .kicker{
+    color:var(--gold);
+}
+
+.final-page .footer{
+    border-color:rgba(18,58,90,.2);
+    color:var(--muted);
+}
+
+.disclaimer{
+    margin-top:35px;
+    padding:26px;
+    border:1px solid rgba(18,58,90,.18);
+    background:rgba(255,255,255,.62);
+    line-height:1.8;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.rate-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:11px;
+    margin-top:14px;
+}
+.rate-table th,
+.rate-table td{
+    border:1px solid var(--line);
+    padding:6px 4px;
+    text-align:center;
+    line-height:1.3;
+}
+.rate-table th{
+    background:var(--navy);
+    color:#ffffff;
+    font-weight:800;
+    font-size:10px;
+}
+.rate-table td:first-child{
+    text-align:left;
+    font-weight:800;
+    color:var(--navy);
+    background:var(--light);
+    padding-left:8px;
+}
+.rate-table tr:nth-child(even) td:not(:first-child){
+    background:var(--lighter);
+}
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@page{
+    size:297mm 186mm;
+    margin:0;
+}
+
+@media print{
+
+    html, body{
+        background:#ffffff;
+        margin:0;
+        padding:0;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+
+    .lang-toggle{
+        display:none !important;
+    }
+
+    .page{
+        width:297mm;
+        height:186mm;
+        min-height:0;
+        margin:0;
+        padding:0 0 18mm;
+        page-break-after:always;
+        break-after:page;
+        overflow:hidden;
+    }
+
+    .page:last-child{
+        page-break-after:auto;
+        break-after:auto;
+    }
+
+    .banner{
+        height:46mm;
+        padding:0 19mm;
+    }
+    .banner h1{font-size:30px;}
+    .banner h1.s-en{font-size:24px;}
+
+    .content{
+        padding:6mm 19mm 0;
+    }
+
+    .footer{
+        left:19mm;
+        right:19mm;
+        bottom:5mm;
+    }
+
+    .cover-content{padding:0 19mm;}
+}
+
+</style>
+</head>
+
+<body data-lang="both">
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle">
+    <button data-set="both" class="active">双语</button>
+    <button data-set="cn">中文</button>
+    <button data-set="en">EN</button>
+</div>
+
+<script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+        document.body.dataset.lang = btn.dataset.set;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b){b.classList.remove('active');});
+        btn.classList.add('active');
+    });
+});
+</script>
+
+
+<!-- =====================================================
+     PAGE 01  COVER
+===================================================== -->
+
+<section class="page cover">
+
+    <div class="cover-content">
+
+        <div class="kicker">HISEAS INTERNATIONAL GMBH</div>
+
+        <div class="cover-title s-zh">2026年11月餐厅月刊</div>
+        <div class="cover-title s-en" style="font-size:52px">November 2026 Restaurant Monthly</div>
+
+        <h2 class="s-zh">欧洲团队餐厅资源</h2>
+        <h2 class="s-en">European Group Dining Resources</h2>
+
+        <div class="cover-date">
+            <span class="s-zh">发布日期：2026年11月</span>
+            <span class="sep">｜</span>
+            <span class="s-en">Publication Date: November 2026</span>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <span>Restaurant Resources · Better Group Dining</span>
+        <span>01</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 02  MONTHLY HIGHLIGHTS (compact, 3 categories)
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-europe">
+        <div class="bc">
+            <span class="banner-tag">11月 · NOVEMBER</span>
+            <div class="kicker"><span class="s-en">MONTHLY HIGHLIGHTS</span> · <span class="s-zh">本月重点</span></div>
+            <h1 class="s-zh">11月餐厅资源概览</h1>
+            <h1 class="s-en">November Restaurant Highlights</h1>
+            <div class="sub"><span class="s-zh">新资源、餐厅状态及节日安排</span><span class="sep">｜</span><span class="s-en">New resources, restaurant status &amp; festive-season arrangements</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="grid-3">
+
+            <div class="card">
+                <div class="label green"><span class="s-en">NEW RESTAURANTS</span> · <span class="s-zh">新餐厅推荐</span></div>
+                <h3><span class="s-zh">萨拉戈萨 &amp; 里斯本</span><span class="sep">｜</span><span class="s-en">Zaragoza &amp; Lisbon</span></h3>
+                <p class="small s-zh">西班牙 2 家 Tapas 餐厅（€28）；葡萄牙里斯本中餐厅（€14）。</p>
+                <p class="small en s-en">2 tapas restaurants in Spain (EUR 28); a Chinese restaurant in Lisbon (EUR 14).</p>
+            </div>
+
+            <div class="card">
+                <div class="label red"><span class="s-en">CLOSURES</span> · <span class="s-zh">关门餐厅</span></div>
+                <h3><span class="s-zh">临时、装修及永久关门</span><span class="sep">｜</span><span class="s-en">Temporary, Renovation &amp; Permanent</span></h3>
+                <p class="small s-zh">Santa Maria、Fellini 临时或装修关门；曼彻斯特、哈尔施塔特永久关门。</p>
+                <p class="small en s-en">Santa Maria and Fellini close temporarily or for renovation; Manchester and Hallstatt permanently closed.</p>
+            </div>
+
+            <div class="card">
+                <div class="label gold"><span class="s-en">FESTIVE SEASON</span> · <span class="s-zh">节日营业及特殊价格</span></div>
+                <h3><span class="s-zh">节日营业与特殊价格</span><span class="sep">｜</span><span class="s-en">Holiday Hours &amp; Special Prices</span></h3>
+                <p class="small s-zh">威尼斯及欧洲各城市圣诞、元旦营业状况、加价幅度及节日菜单。</p>
+                <p class="small en s-en">Christmas &amp; New Year hours, surcharges and festive menus in Venice and other European cities.</p>
+            </div>
+
+        </div>
+
+        <div class="notice blue" style="margin-top:20px">
+            <b><span class="s-zh">本月重点</span><span class="sep">｜</span><span class="s-en">Monthly Focus</span></b>
+            <br>
+            <span class="s-zh">关注新餐厅及节日期间营业与价格变动，及时更新关门、合并及冬季预订政策，方便团队提前确认。</span>
+            <br>
+            <span class="en s-en">Focus on new restaurants and festive-season hours and price changes, and keep closures, mergers and winter booking policies up to date.</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>Hiseas International Tourism Group · <span class="s-zh">2026年11月</span><span class="sep">｜</span><span class="s-en">November 2026</span></span>
+        <span>02</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 03  NEW RESTAURANTS - ZARAGOZA
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-spain">
+        <div class="bc">
+            <span class="banner-tag">SPAIn · 西班牙</span>
+            <div class="kicker" style="background:var(--gold);color:#fff;display:inline-block;padding:6px 12px;font-size:14px">
+                <span class="s-en">NEW RESTAURANT RECOMMENDATION</span> · <span class="s-zh">新餐厅推荐</span>
+            </div>
+            <div class="sub" style="margin-top:10px;color:#25384a">
+                <span class="s-zh">两家可做 Tapas 的新餐厅｜28 欧团队套餐</span>
+                <span class="sep">｜</span>
+                <span class="s-en">Two New Tapas-Friendly Restaurants｜EUR 28 Group Menus</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="callout">
+            <div class="ct s-zh">两家可做 Tapas 的新餐厅 · 28 欧团队套餐</div>
+            <div class="ct s-en">Two New Tapas-Friendly Restaurants · EUR 28 Group Menus</div>
+            <div class="cs s-zh">萨拉戈萨新增两家可做 tapas 的餐厅，团队套餐均为 28 欧。</div>
+            <div class="cs s-en">Two new tapas-friendly restaurants in Zaragoza, both with group menus at EUR 28.</div>
+        </div>
+
+        <div class="grid-2">
+
+            <div class="card">
+                <div class="photo photo-tapas"></div>
+                <div class="city">ZARAGOZA · SPAIN<br><span class="s-zh">萨拉戈萨 · 西班牙</span></div>
+                <h2>Espumosos 5M</h2>
+                <p class="location">C. del Cinco de Marzo, 14, Casco Antiguo, 50004 Zaragoza<br>Tel: +34 976 218 490</p>
+                <div class="price">€28</div>
+                <p><b>6 Tapas + Drinks</b></p>
+                <p class="small"><b>6 tapas:</b> 1 montadito (small open-faced sandwich) with whipped ham spread + 1 banderilla (skewer) with anchovy + 1 guardia civil (skewer with pickled pepper, onion, and tuna/anchovy) + 1 goat cheese round + 1 piece of eggplant with bacon, cheese, and ham + 1 egg with mayonnaise and shrimp</p>
+                <p class="small">1 drink included + 1 glass of sangria</p>
+            </div>
+
+            <div class="card">
+                <div class="photo photo-grill"></div>
+                <div class="city">ZARAGOZA · SPAIN<br><span class="s-zh">萨拉戈萨 · 西班牙</span></div>
+                <h2>Restaurante Parrilla Albarracín</h2>
+                <p class="location">Pl. de Ntra. Sra. del Carmen, 1, 2-3, Casco Antiguo, 50004 Zaragoza<br>Tel: +34 976 158 100</p>
+                <div class="price">€28</div>
+                <p><b>Group Sharing Menu</b></p>
+                <p class="small">Creamy ham croquettes (to share)</p>
+                <p class="small">Spanish potato omelet (to share)</p>
+                <p class="small">Battered calamari rings (to share)</p>
+                <p class="small">Panko-crusted prawns with teriyaki mayonnaise (2 per person)</p>
+                <p class="small">Migas (sautéed breadcrumbs) served in a skillet (1 per person)</p>
+                <p class="small">Grilled longaniza sausage from Graus (to share)</p>
+                <p class="small">1 drink per person (water, wine, beer, or soft drink)</p>
+                <p class="small">1 glass of sangria per person</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">新餐厅推荐 · 西班牙</span><span class="sep">｜</span><span class="s-en">New Restaurant Recommendations · Spain</span></span>
+        <span>03</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 04  NEW RESTAURANT - LISBON
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-portugal">
+        <div class="bc">
+            <span class="banner-tag">PORTUGAL · 葡萄牙</span>
+            <div class="kicker"><span class="s-en">NEW RESTAURANT RECOMMENDATION</span> · <span class="s-zh">新餐厅推荐</span></div>
+            <h1 class="s-zh">里斯本新中餐厅</h1>
+            <h1 class="s-en">New Chinese Restaurant in Lisbon</h1>
+            <div class="sub"><span class="s-zh">西湖餐厅｜14 欧，8 菜 1 汤</span><span class="sep">｜</span><span class="s-en">Xi-H Restaurant｜EUR 14, 8 Dishes + 1 Soup</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="grid-2">
+
+            <div class="card">
+                <div class="photo photo-chinese"></div>
+                <div class="city">LISBON · PORTUGAL<br><span class="s-zh">里斯本 · 葡萄牙</span></div>
+                <h2>西湖餐厅｜Restaurante Xi-H</h2>
+                <p class="location">R. de Belém 97, 1300-083 Lisboa, Portugal</p>
+                <div class="price">€14</div>
+                <p><b><span class="s-zh">8 菜 1 汤</span><span class="sep">｜</span><span class="s-en">8 Dishes + 1 Soup</span></b></p>
+            </div>
+
+            <div class="card soft">
+                <h3><span class="s-zh">菜单内容</span><span class="sep">｜</span><span class="s-en">Menu</span></h3>
+                <p class="s-zh">玉米汤 / 盐水虾 / 青椒鸡肉 / 木耳猪肉 / 蘑菇鱼片 / 包心菜 / 炒青豆 / 炒豆芽 / 西红柿炒鸡蛋</p>
+                <p class="en s-en">Corn soup / salted shrimp / chicken with green pepper / pork with wood ear mushroom / fish fillet with mushroom / cabbage / sautéed green beans / sautéed bean sprouts / tomato and egg</p>
+                <p><b><span class="s-zh">含米饭、水</span><span class="sep">｜</span><span class="s-en">Rice and water included</span></b></p>
+                <div class="notice" style="margin-top:20px">
+                    <b><span class="s-zh">推荐理由</span><span class="sep">｜</span><span class="s-en">Why Recommend?</span></b><br>
+                    <span class="s-zh">价格实惠，菜量丰富，适合预算型团队。</span><br>
+                    <span class="en s-en">Affordable pricing and generous portions, suitable for budget-conscious groups.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">新餐厅推荐 · 葡萄牙</span><span class="sep">｜</span><span class="s-en">New Restaurant Recommendation · Portugal</span></span>
+        <span>04</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 05  TEMPORARY & RENOVATION CLOSURES
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-italy">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">RESTAURANT STATUS</span> · <span class="s-zh">餐厅状态更新</span></span>
+            <div class="kicker"><span class="s-en">TEMPORARY &amp; RENOVATION CLOSURES</span> · <span class="s-zh">临时及装修关门</span></div>
+            <h1 class="s-zh">临时及装修关门餐厅</h1>
+            <h1 class="s-en">Temporarily Closed &amp; Under Renovation</h1>
+            <div class="sub"><span class="s-zh">国家及餐厅图片 · 请于询价前核实</span><span class="sep">｜</span><span class="s-en">Country &amp; restaurant images · Please reconfirm before enquiry</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="status-big orange">
+            <span class="dot"></span>
+            <span class="s-en">TEMPORARILY CLOSED</span>
+            <span class="sep">·</span>
+            <span class="s-zh">临时关门</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="photo photo-restaurant"></div>
+                <div class="city">PISA · ITALY<br><span class="s-zh">比萨 · 意大利</span></div>
+                <h2>Restaurant Santa Maria <span class="s-zh">（Santa Maria）</span></h2>
+                <p class="location">Via Santa Maria, 104, 56126 Pisa PI, Italy</p>
+                <p><b style="color:var(--red)"><span class="s-zh">关门时间：11 月 17 日 — 12 月 16 日</span><span class="sep">｜</span><span class="s-en">Closed: 17 November — 16 December</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="photo photo-chinese"></div>
+                <div class="city">ROME · ITALY<br><span class="s-zh">罗马 · 意大利</span></div>
+                <h2>Jiari Roma Ristorante Cinese<br><span class="s-zh">罗马假日</span></h2>
+                <p><b style="color:var(--red)"><span class="s-zh">关门时间：1 月 7 日 — 1 月 13 日</span><span class="sep">｜</span><span class="s-en">Closed: 7 January — 13 January</span></b></p>
+            </div>
+        </div>
+
+        <div class="status-big red" style="margin-top:20px">
+            <span class="dot"></span>
+            <span class="s-en">CLOSED FOR RENOVATION</span>
+            <span class="sep">·</span>
+            <span class="s-zh">装修关门</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="photo photo-grill"></div>
+                <div class="city">PARIS · FRANCE<br><span class="s-zh">巴黎 · 法国</span></div>
+                <h2>Ristorante Fellini</h2>
+                <p class="location">47 Rue de l'Arbre Sec, 75001 Paris, France</p>
+                <p><b style="color:var(--red)"><span class="s-zh">12 月 19 日 — 1 月 3 日装修关门</span><span class="sep">｜</span><span class="s-en">Closed for renovation: 19 December — 3 January</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="photo photo-buffet"></div>
+                <div class="city">METZ · FRANCE<br><span class="s-zh">梅兹 · 法国</span></div>
+                <h2>Buffet Du Monde</h2>
+                <p class="location">3 Rue du Bois d'Orly, 57685 Augny, France<br>Tel: +33 3 87 35 27 83</p>
+                <p><b style="color:var(--red)"><span class="s-zh">11 月至 12 月初装修关门</span><span class="sep">｜</span><span class="s-en">Closed for renovation from November to early December</span></b></p>
+            </div>
+        </div>
+
+        <div class="notice blue" style="margin-top:18px">
+            <b><span class="s-zh">操作提示</span><span class="sep">｜</span><span class="s-en">Operational Note</span></b><br>
+            <span class="s-zh">以上餐厅在所示日期内无法接待团队，请勿在此期间安排询价及预订；恢复营业后仍需重新确认。</span><br>
+            <span class="en s-en">These restaurants cannot accept groups during the stated dates. Avoid enquiries and bookings for those periods, and reconfirm after reopening.</span>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">餐厅状态更新 · 临时及装修关门</span><span class="sep">｜</span><span class="s-en">Restaurant Status · Temporary &amp; Renovation Closures</span></span>
+        <span>05</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 06  PERMANENT CLOSURES
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-uk">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">RESTAURANT STATUS</span> · <span class="s-zh">餐厅状态更新</span></span>
+            <div class="kicker"><span class="s-en">PERMANENT CLOSURES</span> · <span class="s-zh">永久关门</span></div>
+            <h1 class="s-zh">永久关门餐厅</h1>
+            <h1 class="s-en">Permanently Closed Restaurants</h1>
+            <div class="sub"><span class="s-zh">请勿用于后续询价及预订</span><span class="sep">｜</span><span class="s-en">Do not use for future enquiries or bookings</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="grid-2">
+            <div class="card">
+                <div class="city">MANCHESTER · UNITED KINGDOM<br><span class="s-zh">曼彻斯特 · 英国</span></div>
+                <h2>Las Iguanas – Manchester – Trafford Centre</h2>
+                <p class="location">The Orient, The Trafford Centre, Trafford Park,<br>Stretford, Manchester M17 8AA, UK<br>Tel: +44 161 549 2174</p>
+                <p><b style="color:var(--red)"><span class="s-en">Do not use for future group enquiries or bookings.</span><span class="sep">｜</span><span class="s-zh">请勿用于后续团队询价及预订。</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="city">HALLSTATT · AUSTRIA<br><span class="s-zh">哈尔施塔特 · 奥地利</span></div>
+                <h2>家外家饭店｜Haikky</h2>
+                <p class="location">Bad Goisern am Hallstättersee,<br>Bundesstraße 69, Austria</p>
+                <p><b style="color:var(--red)"><span class="s-en">Do not use for future group enquiries or bookings.</span><span class="sep">｜</span><span class="s-zh">请勿用于后续团队询价及预订。</span></b></p>
+            </div>
+        </div>
+
+        <div class="notice red" style="margin-top:24px">
+            <b><span class="s-en">Important</span><span class="sep">｜</span><span class="s-zh">重要提示</span></b><br>
+            <span class="s-en">Please remove these restaurants from active group dining lists. Future enquiries should use alternative resources.</span><br>
+            <span class="s-zh">请将以上餐厅从可用团队餐厅名单中移除，后续询价请使用替代资源。</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">餐厅状态 · 永久关门</span><span class="sep">｜</span><span class="s-en">Restaurant Status · Permanent Closures</span></span>
+        <span>06</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 07  REOPENING / MERGER / PRICE CHANGE (stacked + photos)
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-italy">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">RESTAURANT UPDATES</span> · <span class="s-zh">餐厅动态</span></span>
+            <div class="kicker"><span class="s-en">RESTAURANT UPDATES</span> · <span class="s-zh">餐厅动态</span></div>
+            <h1 class="s-zh">重新开业、合并及价格变化</h1>
+            <h1 class="s-en">Reopening, Merger &amp; Price Changes</h1>
+            <div class="sub"><span class="s-zh">本月重要动态</span><span class="sep">｜</span><span class="s-en">Key updates this month</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- 1. REOPENING -->
+        <div class="card" style="margin-bottom:18px">
+            <div class="photo photo-sushi"></div>
+            <div class="label green"><span class="s-en">REOPENING</span> · <span class="s-zh">重新开业</span></div>
+            <div class="city">BOLZANO · ITALY<br><span class="s-zh">博尔扎诺 · 意大利</span></div>
+            <h2>Yakisun Sushi</h2>
+            <p class="location">Piazza Domenicani, 4, 39100 Bolzano BZ, Italy</p>
+            <p><b style="color:var(--green)"><span class="s-en">Reopened</span><span class="sep">｜</span><span class="s-zh">已重新开业</span></b></p>
+        </div>
+
+        <!-- 2. MERGER (placed below reopening) -->
+        <div class="card" style="margin-bottom:18px">
+            <div class="photo photo-restaurant"></div>
+            <div class="label gold"><span class="s-en">MERGER</span> · <span class="s-zh">餐厅合并</span></div>
+            <div class="city">BUDAPEST · HUNGARY<br><span class="s-zh">布达佩斯 · 匈牙利</span></div>
+            <h2>Red Carpet Lounge &amp; Piano Bar Budapest<br>+ Domus Vinorum Wine House and Event Hall</h2>
+            <div class="price">€25</div>
+            <p><b><span class="s-zh">餐厅合并，25 欧</span><span class="sep">｜</span><span class="s-en">Merged into one venue; EUR 25</span></b></p>
+        </div>
+
+        <!-- 3. PRICE CHANGE with background photo + comparison -->
+        <div class="card" style="position:relative;overflow:hidden">
+            <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=85');background-size:cover;background-position:center;opacity:.13"></div>
+            <div style="position:relative;z-index:1">
+                <div class="status-big red" style="margin:0 0 16px">
+                    <span class="dot"></span>
+                    <span class="s-zh">价格变化</span>
+                    <span class="sep">·</span>
+                    <span class="s-en">PRICE CHANGE</span>
+                </div>
+                <div class="city">BRATISLAVA · SLOVAKIA<br><span class="s-zh">布拉迪斯拉发 · 斯洛伐克</span></div>
+                <h2>Shanghai Chinese Restaurant<br><span class="s-zh">上海餐厅</span></h2>
+                <p class="location">Prievozská 1318/14, 821 09 Bratislava, Slovakia</p>
+                <div class="price-compare">
+                    <div style="text-align:center">
+                        <div class="pc-label s-zh">原价</div>
+                        <div class="pc-label s-en">OLD PRICE</div>
+                        <span class="price-old">€15</span>
+                    </div>
+                    <span class="price-arrow">→</span>
+                    <div style="text-align:center">
+                        <div class="pc-label new s-zh">新价格</div>
+                        <div class="pc-label new s-en">NEW PRICE</div>
+                        <span class="price-new">€15.90</span>
+                    </div>
+                </div>
+                <div class="price-note s-zh">每人价格上调 · 请注意新餐标</div>
+                <div class="price-note s-en">Price increased per person · please note the new rate</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">餐厅动态 · 重新开业、合并及调价</span><span class="sep">｜</span><span class="s-en">Restaurant Updates · Reopening, Merger &amp; Price Changes</span></span>
+        <span>07</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 08  WINTER BOOKING POLICY
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-restaurant">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">WINTER BOOKING POLICY</span> · <span class="s-zh">冬季预订新政策</span></span>
+            <div class="kicker"><span class="s-en">WINTER BOOKING POLICY</span> · <span class="s-zh">冬季预订新政策</span></div>
+            <h1 class="s-zh">冬季预订新政策</h1>
+            <h1 class="s-en">Winter Booking Policy</h1>
+            <div class="sub"><span class="s-zh">迟到政策</span><span class="sep">｜</span><span class="s-en">Late-arrival policy</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card" style="max-width:840px">
+            <div class="label"><span class="s-en">NEW POLICY</span> · <span class="s-zh">新政策</span></div>
+            <div class="city">VENICE ISLAND · ITALY<br><span class="s-zh">威尼斯岛 · 意大利</span></div>
+            <h2>Ristorante – Pizzeria da Roberto</h2>
+            <div class="notice red" style="margin-top:18px">
+                <b><span class="s-zh">迟到处理</span><span class="sep">｜</span><span class="s-en">Late Arrival</span></b><br>
+                <span class="s-zh">餐厅可为我们保留座位 10–15 分钟；超过 15 分钟，每人需加收 3 欧迟到费。</span><br>
+                <span class="en s-en">The restaurant can hold seats for us for 10–15 minutes. Beyond 15 minutes, every guest will be charged a EUR 3 late fee.</span>
+            </div>
+        </div>
+
+        <div class="notice" style="margin-top:28px;max-width:840px">
+            <b><span class="s-en">Operational Note</span><span class="sep">｜</span><span class="s-zh">操作提示</span></b><br>
+            <span class="s-en">Please brief tour leaders and drivers on this policy in advance to avoid unexpected charges during winter operations.</span><br>
+            <span class="s-zh">请提前告知领队及司机此政策，避免冬季操作中产生额外费用。</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">冬季预订新政策 · 餐厅操作</span><span class="sep">｜</span><span class="s-en">Winter Booking Policy · Restaurant Operations</span></span>
+        <span>08</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 09  FESTIVE SEASON - VENICE
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-venice">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">FESTIVE SEASON</span> · <span class="s-zh">节日期间</span></span>
+            <div class="kicker"><span class="s-en">FESTIVE SEASON ARRANGEMENTS</span> · <span class="s-zh">节日期间安排</span></div>
+            <h1 class="s-zh">威尼斯岛餐厅节日安排及价格变化</h1>
+            <h1 class="s-en">Venice Island Restaurant Holiday Arrangements</h1>
+            <div class="sub"><span class="s-en">Christmas operating status &amp; menu price changes</span><span class="sep">｜</span><span class="s-zh">圣诞营业状况及菜单价格变化</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="grid-2">
+
+            <div class="card">
+                <div class="city">VENICE ISLAND · ITALY<br><span class="s-zh">威尼斯岛 · 意大利</span></div>
+                <h2>Ristorante Pizzeria Nuova Valigia</h2>
+                <div class="label red"><span class="s-en">PRICE INCREASE</span> · <span class="s-zh">价格上涨</span></div>
+                <p style="margin-top:12px"><b style="color:var(--red)"><span class="s-zh">19:00 之后菜单价格上调 6 欧</span><span class="sep">｜</span><span class="s-en">Menu price increases by EUR 6 after 19:00</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="city">VENICE ISLAND · ITALY<br><span class="s-zh">威尼斯岛 · 意大利</span></div>
+                <h2>Ristorante Mare d'Oro<br><span class="s-zh">海上金</span></h2>
+                <div class="label green"><span class="s-en">PRICE UNCHANGED</span> · <span class="s-zh">价格不变</span></div>
+                <p style="margin-top:12px"><b style="color:var(--green)"><span class="s-zh">节日期间价格不变</span><span class="sep">｜</span><span class="s-en">Prices remain unchanged during the festive period</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="city">VENICE ISLAND · ITALY<br><span class="s-zh">威尼斯岛 · 意大利</span></div>
+                <h2>Ristorante – Pizzeria da Roberto</h2>
+                <div class="label red"><span class="s-en">PRICE INCREASE</span> · <span class="s-zh">价格上涨</span></div>
+                <p style="margin-top:12px"><b style="color:var(--red)"><span class="s-zh">12 月 25 日当天涨价 7 欧</span><span class="sep">｜</span><span class="s-en">Price increases by EUR 7 on 25 December</span></b></p>
+            </div>
+
+            <div class="card">
+                <div class="city">VENICE ISLAND · ITALY<br><span class="s-zh">威尼斯岛 · 意大利</span></div>
+                <h2>Dogi</h2>
+                <div class="label"><span class="s-en">CLOSURE</span> · <span class="s-zh">关门</span></div>
+                <p style="margin-top:12px"><b><span class="s-zh">关门时间：12 月 11 日 — 1 月 23 日</span><span class="sep">｜</span><span class="s-en">Closed: 11 December — 23 January</span></b></p>
+            </div>
+
+        </div>
+
+        <div class="notice" style="margin-top:20px">
+            <b><span class="s-en">Please Note</span><span class="sep">｜</span><span class="s-zh">请注意</span></b><br>
+            <span class="s-en">Festive prices and operating hours may be confirmed closer to the date. Please reconfirm before finalising group bookings.</span><br>
+            <span class="s-zh">节日价格及营业时间可能临近日期才会确认，请在确认团队预订前再次核实。</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">节日期间 · 威尼斯岛</span><span class="sep">｜</span><span class="s-en">Festive Season · Venice Island</span></span>
+        <span>09</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 10  FESTIVE SEASON - OTHER CITIES (clean layout + photo bg)
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-france">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">FESTIVE SEASON</span> · <span class="s-zh">节日期间</span></span>
+            <div class="kicker"><span class="s-en">FESTIVE SEASON ARRANGEMENTS</span> · <span class="s-zh">节日期间安排</span></div>
+            <h1 class="s-zh">欧洲其他城市节日安排</h1>
+            <h1 class="s-en">Holiday Arrangements in Other Cities</h1>
+            <div class="sub"><span class="s-zh">营业状况及特殊价格 · 重要信息清晰明了</span><span class="sep">｜</span><span class="s-en">Operating status &amp; special prices · key information at a glance</span></div>
+        </div>
+    </div>
+
+    <div class="content" style="position:relative">
+        <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=85');background-size:cover;background-position:center;opacity:.05;pointer-events:none"></div>
+        <div style="position:relative;z-index:1">
+            <div class="grid-2">
+
+                <!-- LEFT: short-content cards together -->
+                <div class="col-stack">
+
+                    <div class="card">
+                        <div class="city">BRUSSELS · BELGIUM<br><span class="s-zh">布鲁塞尔 · 比利时</span></div>
+                        <h2>La Rose Blanche</h2>
+                        <p class="location small">Grand-Place 11, Brussels 1000, Belgium</p>
+                        <div class="label gold"><span class="s-en">SPECIAL PRICE</span> · <span class="s-zh">特殊价格</span></div>
+                        <p class="small"><b><span class="s-zh">12 月 31 日晚餐价格与往常不同，暂无具体菜单及价格。</span><span class="sep">｜</span><span class="s-en">New Year's Eve dinner price differs from regular; menu and price not yet available.</span></b></p>
+                    </div>
+
+                    <div class="card">
+                        <div class="city">OXFORD · UNITED KINGDOM<br><span class="s-zh">牛津 · 英国</span></div>
+                        <h2>Sichuan Grand｜<span class="s-zh">成都府</span></h2>
+                        <p class="location small">The Old School, Gloucester Green, Oxford OX1 2DF, UK</p>
+                        <div class="label red"><span class="s-en">PRICE +30%</span> · <span class="s-zh">价格上涨 30%</span></div>
+                        <p class="small"><b><span class="s-zh">圣诞节期间价格增加 30%。</span><span class="sep">｜</span><span class="s-en">Prices increase by 30% during the Christmas period.</span></b></p>
+                    </div>
+
+                    <div class="card">
+                        <div class="city">PARIS · FRANCE<br><span class="s-zh">巴黎 · 法国</span></div>
+                        <h2>Restaurant Chez Edouard</h2>
+                        <div class="label green"><span class="s-en">NORMAL OPERATION</span> · <span class="s-zh">正常营业</span></div>
+                        <p><b><span class="s-zh">圣诞节期间正常营业，菜单价格不变。</span><span class="sep">｜</span><span class="s-en">Open as normal during Christmas, with menu prices unchanged.</span></b></p>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: longer-content cards -->
+                <div class="col-stack">
+
+                    <div class="card">
+                        <div class="city">REIMS · FRANCE<br><span class="s-zh">兰斯 · 法国</span></div>
+                        <h2>Meishi Daily｜<span class="s-zh">美食坊</span></h2>
+                        <p class="location small">11 Rue de Fismes, 51100 Reims, France</p>
+                        <div class="label red"><span class="s-en">CHRISTMAS HOLIDAY</span> · <span class="s-zh">圣诞放假</span></div>
+                        <p class="small"><b><span class="s-zh">12/24、25、26 放假 3 天</span><span class="sep">｜</span><span class="s-en">Closed for 3 days: 24, 25 &amp; 26 December</span></b></p>
+                        <div class="label gold" style="margin-top:14px"><span class="s-en">NEW YEAR SURCHARGE</span> · <span class="s-zh">元旦涨价</span></div>
+                        <p class="small"><b style="color:var(--red)"><span class="s-zh">元旦价格上调：原餐标 +2 欧／人</span><span class="sep">｜</span><span class="s-en">New Year's Day: +EUR 2 per person on the existing menu rate</span></b></p>
+                    </div>
+
+                    <div class="card">
+                        <div class="city">COLMAR · FRANCE<br><span class="s-zh">科尔马 · 法国</span></div>
+                        <h2>Restaurant Pfeffel</h2>
+                        <p class="location small">1 rue du Rempart, 68000 Colmar, France</p>
+                        <ul class="vlist">
+                            <li><span class="vnum">1</span><span><span class="s-zh">营业至 <b>2026 年 12 月 29 日</b>。</span><span class="s-en">Open until <b>29 December 2026</b>.</span></span></li>
+                            <li><span class="vnum">2</span><span><span class="s-zh"><b>12 月 24 日晚餐</b>及 <b>12 月 25 日全天</b>不营业。</span><span class="s-en">Closed for <b>dinner on 24 Dec</b> and <b>all day 25 Dec</b>.</span></span></li>
+                            <li><span class="vnum">3</span><span><span class="s-zh">圣诞节期间有<b>节日菜单</b>，且<b>不允许迟到</b>。</span><span class="s-en">Festive menu at Christmas; <b>late arrivals not permitted</b>.</span></span></li>
+                            <li><span class="vnum">4</span><span><span class="s-zh">冬季休假：<b>2026/12/30 — 2027/3/18</b>。</span><span class="s-en">Winter closure: <b>30 Dec 2026 — 18 Mar 2027</b>.</span></span></li>
+                            <li><span class="vnum">5</span><span><span class="s-zh"><b>2027 年 3 月 19 日</b>重新营业。</span><span class="s-en">Reopens <b>19 March 2027</b>.</span></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">节日期间 · 欧洲其他城市</span><span class="sep">｜</span><span class="s-en">Festive Season · Other European Cities</span></span>
+        <span>10</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 11  B2B HOLIDAY RATES
+===================================================== -->
+
+<section class="page">
+
+    <div class="banner b-france">
+        <div class="bc">
+            <span class="banner-tag"><span class="s-en">B2B HOLIDAY RATES</span> · <span class="s-zh">B2B 节日价格</span></span>
+            <div class="kicker"><span class="s-en">B2B HOLIDAY RATES</span> · <span class="s-zh">B2B 节日价格</span></div>
+            <h1 class="s-zh">节日特殊价格及营业安排</h1>
+            <h1 class="s-en">Holiday Special Rates &amp; Operating Arrangements</h1>
+            <div class="sub"><span class="s-en">B2B restaurants · Christmas &amp; New Year 2026–2027</span><span class="sep">｜</span><span class="s-zh">B2B 餐厅 · 2026–2027 圣诞及新年</span></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="notice blue" style="padding:10px 16px;font-size:11px">
+            <b><span class="s-zh">说明</span><span class="sep">｜</span><span class="s-en">Legend</span></b>
+            <span class="s-zh"> O = 按团队价正常营业；Req = 营业但需询价，可能加收附加费；F = 关门；12/31 为新年特别菜单价格。</span>
+            <span class="sep">｜</span>
+            <span class="s-en">O = open at group's rate; Req = open on request, supplement may apply; F = closed; 31 Dec = New Year's Eve special menu price.</span>
+        </div>
+
+        <table class="rate-table">
+            <thead>
+                <tr>
+                    <th><span class="s-zh">餐厅</span><span class="sep">｜</span><span class="s-en">Restaurant</span></th>
+                    <th>24 Dec<br><span class="s-zh">午餐</span><span class="sep">｜</span><span class="s-en">Lunch</span></th>
+                    <th>24 Dec<br><span class="s-zh">晚餐</span><span class="sep">｜</span><span class="s-en">Dinner</span></th>
+                    <th>25 Dec<br><span class="s-zh">午餐</span><span class="sep">｜</span><span class="s-en">Lunch</span></th>
+                    <th>25 Dec<br><span class="s-zh">晚餐</span><span class="sep">｜</span><span class="s-en">Dinner</span></th>
+                    <th>31 Dec<br><span class="s-zh">午餐</span><span class="sep">｜</span><span class="s-en">Lunch</span></th>
+                    <th>31 Dec<br><span class="s-zh">晚餐</span><span class="sep">｜</span><span class="s-en">Dinner</span></th>
+                    <th>01 Jan<br><span class="s-zh">午餐</span><span class="sep">｜</span><span class="s-en">Lunch</span></th>
+                    <th>01 Jan<br><span class="s-zh">晚餐</span><span class="sep">｜</span><span class="s-en">Dinner</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>COME PRIMA BY OSKIAN</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>95,00 €</td><td>O</td><td>Req</td></tr>
+                <tr><td>LES PARISIENNES</td><td>F</td><td>F</td><td>F</td><td>F</td><td>O</td><td>75,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>ENZA FAMIGLIA LOUVRE</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>105,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>CAFÉ CONCORDE</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>Req</td><td>Req</td><td>Req</td></tr>
+                <tr><td>LES DIAMANTAIRES</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>150,00 €</td><td>F</td><td>F</td></tr>
+                <tr><td>LA POUTRE</td><td>O</td><td>O</td><td>O</td><td>O</td><td>O</td><td>F</td><td>Req</td><td>O</td></tr>
+                <tr><td>CAFÉ FLEURUS</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>Req</td><td>Req</td><td>Req</td></tr>
+                <tr><td>LES DEUX PARISIENS – PARIS10</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>50,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>LE SANTA MONICA</td><td>O</td><td>F</td><td>F</td><td>F</td><td>O</td><td>45,00 €</td><td>F</td><td>F</td></tr>
+                <tr><td>L'ACTE III</td><td>O</td><td>98,00 €</td><td>98,00 €</td><td>Req</td><td>O</td><td>119,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>LA MÈRE CATHERINE</td><td>O</td><td>109,00 €</td><td>O</td><td>O</td><td>O</td><td>209,00 €</td><td>O</td><td>O</td></tr>
+                <tr><td>CAFE LOUISE – ST GERMAIN DES P.</td><td>Req</td><td>95,00 €</td><td>Req</td><td>Req</td><td>Req</td><td>195,00 €</td><td>Req</td><td>X (privat)</td></tr>
+                <tr><td>AU CADET DE GASCOGNE</td><td>O</td><td>99,00 €</td><td>S. 5,00 €</td><td>S. 5,00 €</td><td>O</td><td>199,00 €</td><td>S. 5,00 €</td><td>S. 5,00 €</td></tr>
+                <tr><td>LES JARDINS CONTINI</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>50,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>ENZA FAMIGLIA LA DEFENSE</td><td>O</td><td>Req</td><td>Req</td><td>Req</td><td>O</td><td>105,00 €</td><td>Req</td><td>Req</td></tr>
+                <tr><td>YELLOW CAFE</td><td>Req</td><td>Req</td><td>Req</td><td>Req</td><td>Req</td><td>Req</td><td>Req</td><td>Req</td></tr>
+                <tr><td>LA CREMAILLERE</td><td>O</td><td>109,00 €</td><td>O</td><td>O</td><td>O</td><td>235,00 €</td><td>O</td><td>O</td></tr>
+                <tr><td>LE PETIT BROC</td><td>O</td><td>57,00 €</td><td>57,00 €</td><td>57,00 €</td><td>O</td><td>67,00 €</td><td>67,00 €</td><td>67,00 €</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <span><span class="s-zh">B2B 节日价格 · 欧洲团队餐</span><span class="sep">｜</span><span class="s-en">B2B Holiday Rates · European Group Dining</span></span>
+        <span>11</span>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 12  FINAL PAGE
+===================================================== -->
+
+<section class="page final-page">
+
+    <div style="max-width:860px;padding:0 72px">
+        <div class="kicker">HISEAS INTERNATIONAL GMBH</div>
+        <h1>Restaurant Resources · Better Group Dining</h1>
+        <h2><span class="s-zh">欧洲团队餐厅资源</span><span class="sep">｜</span><span class="s-en">European Group Dining Resources</span></h2>
+
+        <div class="disclaimer">
+            <h3><span class="s-zh">图片声明</span><span class="sep">｜</span><span class="s-en">Image Disclaimer</span></h3>
+            <p class="s-zh">本月刊中使用的餐厅及菜品图片仅供视觉参考，不代表餐厅实际环境、实际菜品摆盘或最终菜单。</p>
+            <p class="en s-en">All restaurant and food images used in this publication are for reference only and may not represent the actual restaurant interior, food presentation or final menu.</p>
+            <br>
+            <p class="s-zh">正式预订及出团安排请以餐厅最终确认的信息为准。</p>
+            <p class="en s-en">Final booking and operational arrangements are subject to the restaurant's latest confirmation.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>HISEAS INTERNATIONAL GMBH</span>
+        <span>12</span>
+    </div>
+
+</section>
+
+
+<script>
+window.addEventListener('load',function(){
+  var out=[];
+  document.querySelectorAll('.page').forEach(function(p,i){
+    var content=p.querySelector('.content')||p.querySelector('.cover-content')||p.querySelector('div');
+    out.push((i+1)+': page.scrollH='+p.scrollHeight+' clientH='+p.clientHeight+' content.scrollH='+(content?content.scrollHeight:'-'));
+  });
+  var pre=document.createElement('pre');pre.id='PROBE';pre.textContent=out.join('
+');document.body.appendChild(pre);
+});
+</script></body>
+</html>
